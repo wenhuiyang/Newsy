@@ -19,7 +19,6 @@ const LinkList = (props) => {
         .orderBy("voteCount", "desc")
         .onSnapshot(handleSnapshot);
     }
-
     return firebase.db
       .collection("links")
       .orderBy("created", "desc")
@@ -27,16 +26,22 @@ const LinkList = (props) => {
   }
 
   function handleSnapshot(snapshot) {
-    const links = snapshot.docs.map((doc) => {
+    const alinks = snapshot.docs.map((doc) => {
       return { id: doc.id, ...doc.data() };
     });
-    setLinks(links);
+    setLinks(alinks);
   }
 
   return (
     <>
       {links.map((link, index) => (
-        <LinkItem key={link.id} />
+        <LinkItem
+          key={link.id}
+          showCount={true}
+          url={`/link/${link.id}`}
+          link={link}
+          index={index + 1}
+        />
       ))}
     </>
   );
