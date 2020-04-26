@@ -48,11 +48,11 @@ const App = () => (
       <IonTabs>
         <IonRouterOutlet>
           <Route path="/" render={() => <Redirect to="/news" />} exact={true} />
-          <Route path="/news" componeents={News} />
-          <Route path="/trending" componeents={Trending} />
-          <Route path="/submit" componeents={Submit} />
-          <Route path="/search" componeents={Search} />
-          <Route path="/profile" componeents={Profile} />
+          <Route path="/news" component={News} />
+          <Route path="/trending" component={Trending} />
+          <Route path="/submit" component={Submit} />
+          <Route path="/search" component={Search} />
+          <Route path="/profile" component={Profile} />
           <Route component={() => <Redirect to="/news" />} />
         </IonRouterOutlet>
         <IonTabBar slot="bottom">
