@@ -23,9 +23,9 @@ import Submit from "./pages/Tabs/Submit";
 import Search from "./pages/Tabs/Search";
 import Profile from "./pages/Tabs/Profile";
 import EditProfile from "./pages/Auth/EditProfile";
-import Forgot from "./pages/Auth/Forgot";
-import Login from "./pages/Auth/Login";
 import Signup from "./pages/Auth/Signup";
+import Login from "./pages/Auth/Login";
+import Forgot from "./pages/Auth/Forgot";
 
 /* Core CSS required for Ionic components to work properly */
 import "@ionic/react/css/core.css";

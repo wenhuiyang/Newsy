@@ -21,6 +21,7 @@ class Firebase {
       displayName: name,
     });
   }
+
   login(email, password) {
     return this.auth.signInWithEmailAndPassword(email, password);
   }
